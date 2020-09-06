@@ -1,0 +1,46 @@
+<div class="main-container">
+  <button class="button" mat-button (click)="volver()">Volver a la lista</button>
+  <div class="detail-list">
+    <div class="detail">
+      <div>
+        <p><b>Avatar url:</b> {{user.avatar_url}}</p>
+        <p><b>Events url:</b> {{user.events_url}}</p>
+        <p><b>Following url:</b> {{user.following_url}}</p>
+        <p><b>Gists url:</b> {{user.gists_url}}</p>
+      </div>
+    </div>
+    <div class="detail">
+      <p><b>Grabatar id:</b> {{user.grabatar_id}}</p>
+      <p><b>Html url:</b> {{user.html_url}}</p>
+      <p><b>ID:</b> {{user.id}}</p>
+      <p><b>Login:</b> {{user.login}}</p>
+    </div>
+    <div class="detail">
+      <p><b>Node id:</b> {{user.node_id}}</p>
+      <p><b>Organizations url:</b> {{user.organizations_url}}</p>
+      <p><b>Recieved events url:</b> {{user.recieved_events_url}}</p>
+      <p><b>Site admin:</b> {{user.site_admin}}</p>
+    </div>
+    <div class="detail">
+      <p><b>Starred url:</b> {{user.starred_url}}</p>
+      <p><b>Type:</b> {{user.type}}</p>
+      <p><b>Url:</b> {{user.url}}</p>
+    </div>
+  </div>
+  <div class="especial-detail">
+    <!-- Div con la lista de repositorios -->
+    <div class="repositories">
+      <p><b>Lista de repositorios:</b></p>
+      <div class="" *ngFor="let repositorie of repositories">
+        <p>{{repositorie.name}}</p>
+      </div>
+    </div>
+    <!-- Div con la lista de seguidores -->
+    <div class="repositories">
+      <p><b>Lista de seguidores:</b></p>
+      <div class="" *ngFor="let follower of followers">
+        <p>{{follower.login}}</p>
+      </div>
+    </div>
+  </div>
+</div>

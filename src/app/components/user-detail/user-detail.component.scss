@@ -1,0 +1,69 @@
+.main-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: auto;
+  word-break: break-all;
+  animation: pulse 3s;
+  @media (max-width: 400px) {
+    width: 100%;
+  }
+  @media (min-width: 600px) {
+    max-width: 52em;
+  }
+}
+.detail-list{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70%;
+  @media (min-width: 500px) {
+    width: 85%;
+  }
+  @media (min-width: 750px) {
+    width: 95%;
+  }
+}
+.especial-detail{
+  display: flex;
+  width: 70%;
+  @media (max-width: 500px) {
+    flex-direction: column;
+    width: 85%;
+  }
+  @media (min-width: 750px) {
+    width: 100%;
+  }
+}
+.repositories, .followers{
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 2%;
+  width: 50%;
+  @media (max-width: 500px) {
+    width: 100%;
+  }
+}
+.detail{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 2%;
+  width: 100%;
+}
+.button{
+  margin: 5px;
+}
+p:hover{
+  background-color: lightblue;
+}
+@keyframes pulse {
+  0% {
+    background-color: black;
+  }
+  100% {
+    background-color: lightgrey;
+  }
+}
