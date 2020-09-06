@@ -1,6 +1,6 @@
 # NuvolarApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.1.
+You can see the app running in this URL --> https://eakerlord.github.io/Nuvolar-app/lista
 
 ## Development server
 
