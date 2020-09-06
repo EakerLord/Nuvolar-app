@@ -17,6 +17,7 @@ export class UserListComponent implements OnInit {
   usuarios = [];
   usuariosMostrados = [];
   showSpinner = false;
+  noUsers = false;
 
   constructor(
     private fb: FormBuilder,
@@ -48,12 +49,16 @@ export class UserListComponent implements OnInit {
     const usuariosFiltrados = [];
 
     this.usuarios.forEach(usuario => {
-      if ( usuario.login.includes(usuarioBuscado)){
+      if ( usuario.login.includes(usuarioBuscado.toLowerCase())){
         usuariosFiltrados.push(usuario);
       }
     });
-
     this.usuariosMostrados = usuariosFiltrados;
+    if (this.usuariosMostrados.length === 0) {
+      this.noUsers = true;
+    } else {
+      this.noUsers = false;
+    }
   }
 
   mirarDetalle( usuario: any ){

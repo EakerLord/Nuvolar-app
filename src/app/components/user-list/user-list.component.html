@@ -20,5 +20,8 @@
       <img class="image" src={{usuario.avatar_url}} alt="Imagen de usuario">
       <label>{{usuario.login}}</label>
     </div>
+    <div *ngIf="noUsers">
+      <p>Sorry but no user with that name was found, please try another.</p>
+    </div>
   </div>
 </div>
